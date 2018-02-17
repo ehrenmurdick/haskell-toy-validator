@@ -1,0 +1,29 @@
+-- This file has been generated from package.yaml by hpack version 0.21.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 23a2f1b8e233cc6d5b6bb6b9b47f32102bbc364c251188561ab9db6aca5bf284
+
+name:           validate
+version:        0.1.0.0
+category:       Web
+homepage:       https://github.com/githubuser/state#readme
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2018 Author name here
+license:        BSD3
+build-type:     Simple
+cabal-version:  >= 1.10
+
+executable state
+  main-is: Main.hs
+  other-modules:
+      Lib
+      Validator
+      Paths_validate
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , mtl
+  default-language: Haskell2010
