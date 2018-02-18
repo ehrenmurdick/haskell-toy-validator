@@ -14,7 +14,7 @@ ehren =
 
 invalidUser = User Nothing (Just "email") Nothing
 
-validateUser :: User -> Validated User
+validateUser :: User -> [String]
 validateUser =
   validate
     [ (presence "email" email)
@@ -28,12 +28,9 @@ validateUser =
 Provides the following:
 
 ```hs
- errorMessages $ validateUser invalidUser
- -- ["name cannot be blank","address cannot be blank"]
+validateUser invalidUser
+-- ["name cannot be blank","address cannot be blank"]
 
-  isValid  $ validateUser invalidUser 
-  -- False
-
-  errorMessages $ validateUser ehren
-  -- ["email is too long","name is too short"]
+validateUser ehren
+-- ["email is too long","name is too short"]
 ```
