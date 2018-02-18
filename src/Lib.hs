@@ -13,7 +13,7 @@ ehren =
 
 invalidUser = User Nothing (Just "email") Nothing
 
-validateUser :: User -> Validated User
+validateUser :: User -> [String]
 validateUser =
   validate
     [ (presence "email" email)
